@@ -1,0 +1,90 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type UserProfile {
+  id: Int!
+  bio: String!
+  user: User!
+}
+
+type Tag {
+  id: Int!
+  name: String!
+  post: [Post!]
+}
+
+type Post {
+  id: Int!
+  title: String!
+  content: String!
+  author: User!
+  tags: [Tag!]
+}
+
+type User {
+  id: Int!
+  username: String!
+  profile: UserProfile
+  posts: [Post!]
+}
+
+type LoginResponse {
+  access_token: String!
+  user: User!
+}
+
+type Query {
+  getUserById(id: Int!): User
+  getUserByUsername(username: String!): User
+  getUsers: [User!]!
+  getUserProfile(id: Int!): UserProfile
+  getAllPost: [Post!]!
+  getPostById(id: Int!): [Post!]
+  getAllTag: [Tag!]!
+}
+
+type Mutation {
+  createUser(createUserInput: CreateUserInput!): User!
+  createUserProfile(createUserProfile: CreateUserProfileData!): UserProfile!
+  updateUserProfile(updateUserProfile: UpdateUserProfileData!): UserProfile
+  createPost(createPost: CreatePostData!): Post!
+  updatePost(updatePost: UpdatePostData!): Post!
+  deletePost(input: Int!): Post!
+  login(loginUserInput: LoginUserInput!): LoginResponse!
+}
+
+input CreateUserInput {
+  username: String!
+  password: String!
+}
+
+input CreateUserProfileData {
+  id: Int!
+  bio: String!
+}
+
+input UpdateUserProfileData {
+  id: Int!
+  bio: String!
+}
+
+input CreatePostData {
+  title: String!
+  content: String!
+  author: String!
+  tags: [String!]!
+}
+
+input UpdatePostData {
+  id: Int!
+  title: String
+  content: String
+  author: String
+  tags: [String!]
+}
+
+input LoginUserInput {
+  username: String!
+  password: String!
+}
