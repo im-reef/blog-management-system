@@ -1,6 +1,169 @@
+# Project Overview
+
+### Download this repo at 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
+
+## Objective
+This is a blog management system that I created based on the task by Webby. This system allow users to register, log in securely, craete and manage posts with tags. This is a backend system that utilizes graphQL API and NestJS framework that prioritize the use of OOP for scalable code.
+
+## Tech Stack
+- Backend framework: NestJS (TypeScript)
+- API: GraphQL (code-first approach)
+- Authentication: JWT
+- Database: PostgreSQL
+- ORM: TypeORM
+
+## Project Status
+- [ ] Add delight to the experience when all tasks are complete :tada:
+
+## Setup instruction
+- <p align="center">Install <a href="http://nodejs.org" target="_blank">Node.js</a>.</p>
+- Install Nest CLI globally using npm:
+```bash
+$ npm install -g @nestjs/cli
+```
+- <p align="center">Install <a href="https://www.postgresql.org/download/" target="_blank">PostgreSQL</a>.</p>
+- Create a database called blog_graphql:
+```bash
+#Your default username is postgress
+$ psql -U postgress
+
+#Create your database (don't forget your semicolon)
+CREATE DATABASE blog_graphql;
+```
+
+## How to run locally
+```bash
+# watch mode
+$ npm run start:dev
+```
+<p align="center">Open graphql playground at<a href="http://localhost:3000/graphql" target="_blank">localhost:3000/graphql</a>.</p>
+
+> [!IMPORTANT]
+> Don't forget to authenticate with JWT before create/view/edit/delete post.
+> ```bash
+> {
+> "Authorization": "Bearer eyJhbGciOiJIU..."
+> }
+> ```
+## Sample GraphQL queries and mutations
+```bash
+# Create User
+mutation{
+  	createUser(createUserInput: {
+      username: "Ammar",
+      password: "ammar123"
+    }) {
+    id
+    username
+  }
+}
+
+#Login
+mutation{
+  login(loginUserInput: {
+    username: "Ammar",
+    password: "ammar123"
+  }){
+    
+    user{
+      username
+    }
+    access_token
+  }
+}
+
+#View user profile
+ getUserProfile(id: 1){
+    bio
+}
+
+#Update user profile
+mutation{
+  updateUserProfile(updateUserProfile:{
+    id: 1,
+    bio: "Hello World!"
+  }){
+    id
+    bio
+  }
+}
+
+#Create post by author name and authenticate by user token
+mutation{
+  createPost(createPost: {
+    title: "My first time here",
+    content: "Feel free to reach out to me",
+    author: "Ammar",
+    tags: ["Princess Bride", "Inigo Montoya"]
+  }){
+    id
+    title
+    content
+    tags{
+      id
+      name
+    }
+
+  }
+}
+
+#View Post by user id
+query{
+  getPostById(id: 1){
+    id
+    title
+    content
+    author{
+      id
+    }
+    tags{
+      id
+      name
+    }
+  }
+}
+
+#Update post with postID and authenticate by user token
+mutation{
+  updatePost(updatePost: {
+    id: 1,
+    title: "My name is inigo montoya",
+    content: "You kill my father prepare to die"
+    tags: ["Princess Bride", "Inigo Montoya"]
+  } ){
+    id
+    title
+    author{
+      username
+    }
+    tags{
+      name
+    }
+  }
+}
+
+#Delete post with postID and user token
+mutation{
+  deletePost(input: 10){
+    id
+    title
+    content
+    author{
+      username
+    }
+  }
+}
+
+#Get all tags
+query{
+  getAllTag{
+    name
+  }
+}
+```
 
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
