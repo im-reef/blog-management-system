@@ -115,7 +115,7 @@ mutation{
   }
 }
 
-#View Post by user id
+#View Post by user id and authenticated by user token
 query{
   getPostById(id: 1){
     id
