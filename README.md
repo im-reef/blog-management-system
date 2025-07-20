@@ -16,7 +16,11 @@ This is a blog management system that I created based on the task by Webby. This
 - ORM: TypeORM
 
 ## Project Status
-- [ ] Add delight to the experience when all tasks are complete :tada:
+- [x] Funtional GraphQL endpoints using code-first approach :tada:
+- [x] Database schema using PostgreSQL:tada:
+- [x] TypeORM :tada:
+- [x] JWT authentication :tada:
+- [ ] CQRS
 
 ## Setup instruction
 - <p>Install <a href="http://nodejs.org" target="_blank">Node.js</a>.</p>
