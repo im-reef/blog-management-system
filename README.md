@@ -17,7 +17,7 @@ This is a blog management system that I created based on the task by Webby. This
 
 ## Project Status
 - [x] Funtional GraphQL endpoints using code-first approach :tada:
-- [x] Database schema using PostgreSQL:tada:
+- [x] Database schema using PostgreSQL :tada:
 - [x] TypeORM :tada:
 - [x] JWT authentication :tada:
 - [ ] CQRS
