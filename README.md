@@ -6,7 +6,7 @@ git clone https://github.com/im-reef/blog-management-system.git
 ```
 
 ## Objective
-This is a blog management system that I created based on the task by Webby. This system allow users to register, log in securely, craete and manage posts with tags. This is a backend system that utilizes graphQL API and NestJS framework that prioritize the use of OOP for scalable code.
+This is a blog management system that I created based on the task given by Webby. This system allow users to register, log in securely, create and manage posts with tags. This is a backend system that utilizes graphQL API and NestJS framework that prioritize the use of OOP for scalable code.
 
 ## Tech Stack
 - Backend framework: NestJS (TypeScript)
@@ -102,7 +102,7 @@ mutation{
     title: "My first time here",
     content: "Feel free to reach out to me",
     author: "Ammar",
-    tags: ["Princess Bride", "Inigo Montoya"]
+    tags: ["NestJS", "GraphQL"]
   }){
     id
     title
