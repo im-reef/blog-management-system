@@ -43,7 +43,7 @@ CREATE DATABASE blog_graphql;
 # watch mode
 $ npm run start:dev
 ```
-<p>Open graphql playground at<a href="http://localhost:3000/graphql" target="_blank">localhost:3000/graphql</a>.</p>
+<p>Open graphql playground at <a href="http://localhost:3000/graphql" target="_blank">localhost:3000/graphql</a>.</p>
 
 > [!IMPORTANT]
 > Don't forget to authenticate with JWT before create/view/edit/delete post.
