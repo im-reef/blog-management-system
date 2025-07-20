@@ -19,12 +19,12 @@ This is a blog management system that I created based on the task by Webby. This
 - [ ] Add delight to the experience when all tasks are complete :tada:
 
 ## Setup instruction
-- <p align="center">Install <a href="http://nodejs.org" target="_blank">Node.js</a>.</p>
+- <p>Install <a href="http://nodejs.org" target="_blank">Node.js</a>.</p>
 - Install Nest CLI globally using npm:
 ```bash
 $ npm install -g @nestjs/cli
 ```
-- <p align="center">Install <a href="https://www.postgresql.org/download/" target="_blank">PostgreSQL</a>.</p>
+- <p>Install <a href="https://www.postgresql.org/download/" target="_blank">PostgreSQL</a>.</p>
 - Create a database called blog_graphql:
 ```bash
 #Your default username is postgress
@@ -39,7 +39,7 @@ CREATE DATABASE blog_graphql;
 # watch mode
 $ npm run start:dev
 ```
-<p align="center">Open graphql playground at<a href="http://localhost:3000/graphql" target="_blank">localhost:3000/graphql</a>.</p>
+<p>Open graphql playground at<a href="http://localhost:3000/graphql" target="_blank">localhost:3000/graphql</a>.</p>
 
 > [!IMPORTANT]
 > Don't forget to authenticate with JWT before create/view/edit/delete post.
