@@ -1,9 +1,9 @@
 # Project Overview
 
-### Download this repo at 
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+### Download this repo at
+```bash
+git clone https://github.com/im-reef/blog-management-system.git
+```
 
 ## Objective
 This is a blog management system that I created based on the task by Webby. This system allow users to register, log in securely, craete and manage posts with tags. This is a backend system that utilizes graphQL API and NestJS framework that prioritize the use of OOP for scalable code.
