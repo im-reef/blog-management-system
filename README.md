@@ -45,7 +45,7 @@ $ npm run start:dev
 ```
 <p>Open graphql playground at <a href="http://localhost:3000/graphql" target="_blank">localhost:3000/graphql</a>.</p>
 
-
+## Sample GraphQL queries and mutations
 > [!IMPORTANT]
 > Don't forget to authenticate with JWT before create/view/edit/delete post.
 > ```bash
@@ -53,7 +53,6 @@ $ npm run start:dev
 > "Authorization": "Bearer eyJhbGciOiJIU..."
 > }
 > ```
-## Sample GraphQL queries and mutations
 ```bash
 # Create User
 mutation{
