@@ -16,7 +16,7 @@ This is a blog management system that I created based on the task given by Webby
 - ORM: TypeORM
 
 ## Project Status
-- [x] Funtional GraphQL endpoints using code-first approach :tada:
+- [x] Functional GraphQL endpoints using code-first approach :tada:
 - [x] Database schema using PostgreSQL :tada:
 - [x] TypeORM :tada:
 - [x] JWT authentication :tada:
